@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🍟 Foodies Order Form 🍔</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px;
+      background-color: #ffd4e5; /* Pastel yellow background color */
+    }
+
+    h2 {
+      color: #f18d9e; /* Pastel coral text color */
+    }
+
+    form {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #ffecd0; /* Pastel pink background color */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Light shadow effect */
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #a3d2ca; /* Pastel teal text color */
+      font-weight: bold; /* Make labels bold */
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #d79e78; /* Pastel peach background color */
+      color: #fff; /* White text color */
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .cute-image {
+      max-width: 200px; /* Adjust the value to your desired width */
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-weight: bold;
+    }
+
+    div.checkbox-label {
+      display: flex;
+      align-items: center;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    #challengesSection {
+      background-color: #55a8cb; /* Light salmon background color */
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    #challengesContent {
+      font-size: 14px; /* Make the font size smaller */
+      background-color: #f9ddd8; /* Darker color for the specified section */
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+      color: #fff; /* White text color */
+    }
+
+    #surveyQuestionsSection {
+      background-color: #c3e4ed; /* Light blue background color */
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form id="orderForm">
+    <h2>🍔 FOODIES ORDER FORM 🍟</h2>
+
+    <img class="cute-image" src="https://img.freepik.com/free-vector/set-cute-rabbit-with-duck-different-posture-cartoon-illustration_56104-476.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1700956800&semt=ais" alt="Cute Character">
+
+    <div>
+      <h3 style="color: #00a896;">ORDER DETAILS</h3>
+
+      <h3 style="color: #dbab7b;">Potato Type</h3>
+      <select id="potatoType" name="potatoType">
+        <option value=" "> </option>
+        <option value="RegularPotato">Regular Potato</option>
+        <option value="SweetPotato">Sweet Potato</option>
+        <option value="WaffleFries">Waffle Fries</option>
+        <option value="CurlyFries">Curly Fries</option>
+      </select>
+
+      <h3 style="color: #dbab7b;">Toppings</h3>
+      <div>
+        <div class="checkbox-label">
+          <input type="checkbox" id="cheese" name="topping" value="Cheese">
+          <label for="cheese">Cheese 🧀</label>
+        </div>
+
+        <div class="checkbox-label">
+          <input type="checkbox" id="bacon" name="topping" value="Bacon">
+          <label for="bacon">Bacon 🥓</label>
+        </div>
+
+        <div class="checkbox-label">
+          <input type="checkbox" id="sourCream" name="topping" value="Sour Cream">
+          <label for="sourCream">Sour Cream 🍶</label>
+        </div>
+
+        <div class="checkbox-label">
+          <input type="checkbox" id="chives" name="topping" value="Chives">
+          <label for="chives">Chives 🌿</label>
+        </div>
+
+        <div class="checkbox-label">
+          <input type="checkbox" id="guacamole" name="topping" value="Guacamole">
+          <label for="guacamole">Guacamole 🥑</label>
+        </div>
+      </div>
+
+      <h3 style="color: #000000;">Quantity:</h3>
+      <input type="number" id="quantity" name="quantity">
+
+      <h3 style="color: #000000;">Price:</h3>
+      <input type="number" id="price" name="price" step="0.01">
+    </div>
+
+    <img class="cute-image" src="https://img.freepik.com/free-vector/cat-holding-vegetable-basket-with-duck-cartoon-illustration_56104-488.jpg" alt="Cute Character">
+
+    <div>
+      <h3 style="color: #6a0572;">SURVEY QUESTIONS</h3>
+
+      <div id="surveyQuestionsSection">
+        <h3 style="color: #b67bdb;">1. Was the order process easy?</h3>
+        <input type="radio" name="orderProcess" value="Yes"> Yes
+        <input type="radio" name="orderProcess" value="No"> No
+        <div id="challengesSection">
+          <label>If No, please specify why it was challenging:</label>
+          <div class="checkbox-label">
+            <input type="checkbox" id="confusingMenu" name="challenges" value="Confusing menu options">
+            <label for="confusingMenu">Confusing menu options</label>
+          </div>
+
+          <div class="checkbox-label">
+            <input type="checkbox" id="technicalIssues" name="challenges" value="Technical issues with the form">
+            <label for="technicalIssues">Technical issues with the form</label>
+          </div>
+
+          <div class="checkbox-label">
+            <input type="checkbox" id="other" name="challenges" value="Other">
+            <label for="other">Other (please specify):</label>
+            <input type="text" id="otherText" name="otherText">
+          </div>
+        </div>
+        <h3 style="color: #b67bdb;">2. Are you satisfied with the available toppings?</h3>
+        <input type="radio" name="satisfiedWithToppings" value="Yes"> Yes
+        <input type="radio" name="satisfiedWithToppings" value="No"> No
+      </div>
+    </div>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <form id="kitchenDisplayForm">
+    <h2 style="color: #9d8189;">🍟 FOODIES KITCHEN DISPLAY SCREEN 🍔</h2>
+
+    <div>
+      <h3 style="color: #ffb5a7;">ORDER OVERVIEW</h3>
+
+      <p>Potato Type: <span id="outputPotatoType"></span></p>
+      <p>Toppings: <span id="outputToppings"></span></p>
+      <p>Quantity: <span id="outputQuantity"></span></p>
+      <p>Price: <span id="outputPrice"></span></p>
+    </div>
+
+    <div>
+      <h3 style="color: #aad8d3;">PREPARATION INSTRUCTIONS</h3>
+
+      <label for="preparationInstructions">Instructions:</label>
+      <textarea id="preparationInstructions" name="preparationInstructions" rows="4" cols="50"></textarea>
+    </div>
+  </form>
+
+  <script>
+    // JavaScript to update kitchen display
+    document.getElementById('orderForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Retrieve values from the order form
+      var potatoType = document.getElementById('potatoType').value;
+      var toppings = Array.from(document.getElementsByName('topping'))
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value);
+      var quantity = document.getElementById('quantity').value;
+      var price = document.getElementById('price').value;
+
+      // Update kitchen display form
+      document.getElementById('outputPotatoType').textContent = potatoType;
+      document.getElementById('outputToppings').textContent = toppings.join(', ');
+      document.getElementById('outputQuantity').textContent = quantity;
+      document.getElementById('outputPrice').textContent = '$' + price;
+
+      // Show the kitchen display form
+      document.getElementById('kitchenDisplayForm').style.display = 'block';
+    });
+  </script>
+
+</body>
+
+</html>
